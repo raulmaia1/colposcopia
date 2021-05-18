@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:ui="http://java.sun.com/jsf/facelets">
+
+<h:head>
+	<h:outputStylesheet library="css" name="bootstrap.css" />
+	<ui:insert name="header">
+		<ui:include src="WEB-INF/cabecalho.xhtml" />
+	</ui:insert>
+</h:head>
+
+<h:body>
+
+	<h:form>
+		<div
+			class="form-row text-center position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-light">
+			<div class="col-12 ">
+				<h:outputLabel value="Vamos Começar"
+					styleClass="h1 display-4 fw-normal col-12" />
+
+				<h:commandButton value="Novo Exame" action="exame_colposcopico.xhtml"
+					styleClass="btn btn-outline-secondary btn-lg" />
+			</div>
+		</div>
+
+	</h:form>
+
+</h:body>
+</html>

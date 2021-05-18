@@ -1,0 +1,6 @@
+<!ELEMENT faceted-project (fixed,installed+)>
+<!ELEMENT fixed EMPTY>
+<!ATTLIST fixed facet NMTOKEN #REQUIRED>
+<!ELEMENT installed EMPTY>
+<!ATTLIST installed facet NMTOKEN #REQUIRED>
+<!ATTLIST installed version NMTOKEN #REQUIRED>

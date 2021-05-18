@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:ui="http://java.sun.com/jsf/facelets">
+
+<ui:composition>
+	<h:head>
+		<h:outputStylesheet library="css" name="bootstrap.css" />
+	</h:head>
+
+	<h:body>
+		<h:form>
+			<p:menubar styleClass="navbar navbar-expand-lg navbar-light"
+				style="background: #59c8d7;">
+
+				<p:menuitem disabled="true" value="COLPOSCOPIA" styleClass="h3"
+					style="color: #f0f0f0;" />
+
+				<p:menuitem value="Novo Exame" action="/exame_colposcopico.xhtml"
+					styleClass="h5" style="color: #f0f0f0;" />
+
+				<p:menuitem value="Lista de Exames Feitos"
+					action="/listartodos.xhtml" styleClass="h5" style="color: #f0f0f0;" />
+			</p:menubar>
+
+		</h:form>
+	</h:body>
+</ui:composition>
+</html>
+
+

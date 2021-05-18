@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:ui="http://java.sun.com/jsf/facelets">
+
+<h:head>
+	<ui:insert name="header">
+		<ui:include src="WEB-INF/cabecalho.xhtml" />
+	</ui:insert>
+</h:head>
+<h:body styleClass="container-fluid">
+	<h:form id="formulario">
+		<h:panelGrid columns="2" cellpadding="10" styleClass="row g-2">
+
+			<p:inputText value="#{listarTodos.pesquisaNomePaciente}"
+				styleClass="col form-control" placeholder="Nome do Paciente" />
+
+			<p:commandButton update="formulario" value="Pesquisar"
+				styleClass="btn btn-primary col"/>
+
+		</h:panelGrid>
+
+		<h:dataTable id="tabela" value="#{listarTodos.lista}" var="e"
+			styleClass="table table-responsive table-striped">
+			<h:column>
+				<f:facet name="header">Nome Paciente</f:facet>
+				<h:outputLabel value="#{e.nomePaciente}" />
+			</h:column>
+			<h:column>
+				<f:facet name="header">Descrição Macroscópica</f:facet>
+				<h:outputLabel value="#{e.descricaoMacroscopica}" />
+			</h:column>
+			<h:column>
+				<f:facet name="header">Editar</f:facet>
+				<h:commandButton value="Editar"
+					action="#{listarTodos.editaPaciente(e)}"
+					styleClass="btn btn-secondary btn-sm" />
+			</h:column>
+
+
+		</h:dataTable>
+	</h:form>
+</h:body>
+</html>
