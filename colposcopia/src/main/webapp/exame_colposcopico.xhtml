@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:ui="http://java.sun.com/jsf/facelets">
+
+
+<h:head>
+	<ui:insert name="header">
+		<ui:include src="WEB-INF/cabecalho.xhtml" />
+	</ui:insert>
+</h:head>
+<h:body>
+	<h:form>
+
+
+		<h:panelGrid columns="1" cellpadding="3" cellspacing="5"
+			styleClass="form container">
+			
+			<h:panelGrid columns="4" styleClass="col-12 table text-left">
+				<h:outputLabel value="Nome Paciente .:" styleClass="form-label col" />
+				<h:inputText value="#{exameBean.exame.nomePaciente}" styleClass="form-control col " />
+				<h:outputLabel value="Data de Nascimento .:" styleClass="form-label col"/>    
+				<p:inputMask value="#{exameBean.exame.dataNascimento}" mask="99/99/9999" styleClass="form-control col"/>
+			</h:panelGrid>
+			
+			
+			<h:outputLabel value="Descrição Macroscópica" styleClass="form-label" />
+			<h:inputTextarea value="#{exameBean.exame.descricaoMacroscopica}"
+				styleClass="form-control" />
+
+			<h:outputLabel value="Avaliação" styleClass="form-label" />
+			<h:inputTextarea value="#{exameBean.exame.avaliacao}"
+				styleClass="form-control" />
+
+			<h:outputLabel value="Achados Colposcópicos Normais"
+				styleClass="form-label" />
+			<h:inputTextarea
+				value="#{exameBean.exame.achadosColposcopicosNormais}"
+				styleClass="form-control" />
+
+			<h:outputLabel value="Achados Colposcópicos Anormais"
+				styleClass="form-label" />
+			<h:inputTextarea
+				value="#{exameBean.exame.achadosColposcopicosAnormais}"
+				styleClass="form-control" />
+
+			<h:outputLabel value="Outros Anormais" styleClass="form-label" />
+			<h:inputTextarea value="#{exameBean.exame.outrosAnormais}"
+				styleClass="form-control" />
+
+			<h:outputLabel value="Conclusão" styleClass="form-label" />
+			<h:inputTextarea value="#{exameBean.exame.conclusao}"
+				styleClass="form-control" />
+			
+			
+			
+			<h:commandButton value="Gerar Exame" action="#{exameBean.geraExame}"
+				styleClass="btn btn-primary mb-3" />
+
+		</h:panelGrid>
+	</h:form>
+</h:body>
+
+
+</html>
+
